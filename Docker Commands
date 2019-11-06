@@ -1,0 +1,70 @@
+--> docker attache:
+    If you want to attache something to running container then this command will use. like to attach stdin,stdout,error strams.
+--> docker build 
+     Use to build an image from the docker file. 
+     --build-arg : to pass argument
+     diff diff options can be add like --add-host, --cpu-quota, --cache-from etc....
+--> docker builder prune : Use to remove build cache.
+--> docker commit [optins] cont_name repo_name/tag_name
+    It is use to create the new image from the container changes.
+    options : -p -> To pause container during commit
+--> docker config COMMAND 
+    It is use to manage the Docker Config
+    COMMAND: create, inspect, ls
+    This command will work with Swarm Orchestrator
+--> docker container cp
+    Use to copy file/folder between container and local file system
+    eg. docker cp CONT_source path Dest_path   (Vise and versa)
+--> docker container diff
+    Use to inspect the changes to files and folders on container filesystem
+ -> docker container exec 
+    To enter into container
+ -> docker container export
+    To export container filesystem as tar archive
+    eg. docker export red_panda > latest.tar
+ -> docker container inspect
+    To inspect detailed information of container
+ -> docker container logs
+    To fetch the log of a container
+ -> docker container pause
+    To pause all the processes in the container
+ -> docker container ports
+    Use to list port mapping or specific mapping for container
+ -> docker container stats
+    To display the live stream of container resource usage
+ -> docker container top cont_id
+    To display the running process of container
+ -> docker container unpause : To unpause all processes
+ -> docker container wait
+    It will block untill one or more container stops and then print exit codes
+--> docker context create/export/inspet/ls/rm/update
+--> docker stack deploy STACK_Name
+    It is use to create or update the stack from compose or dab file on the swarm.
+--> --with-registry-auth :- It is use to send the registry authentication information to swarm agent
+--> docker events
+    Use to get the real time events from the server and this events are different for each docker object
+--> docker engine activate/update/check
+    To deal with docker engine
+--> docker history image_name
+    Show the history of the image
+--> docker image build/history/import/inspect/prune/pull/push
+--> docker info 
+    It will give system wide info like kernel version, number of containers and images and to show dibugging output add -D
+--> docker import 
+    Import the content from the tar file.
+    You can specify the URL or - to take data from STDIN
+--> docker load
+    It will load an image from the tar
+    eg. docker load < busybox.tar.gz
+--> docker network connect/create/inspect/prune/rm
+--> docker node : To manage the swarm nodes
+    -> docker node demote : To demote the node from swarm
+    -> docker node inspect : To inspect the node 
+    -> docker node ls : to list the running task on the node
+--> docker rename CONT_NAME NEW_NAME
+--> docker search IMG_NAME : To search for an image in HUB
+--> docker swarm init : To initialize the swarm
+    docker swarm join : To join as a node
+    docker swarm leave : To leave a swarm
+    docker swarm update : To update a swarm
+    
