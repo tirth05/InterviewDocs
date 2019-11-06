@@ -1,0 +1,39 @@
+*==========================Jenkins=Setup=And=Jobs==================================**
+
+Jenkins is setup in linux VM V30.
+We use ThinBackup plugin to take backup of the jenkins and restore it in new jenkins if needed. So that, we will have backup if the jenkins VM goes down. That backup contains all the jenkins configurations such as jenkins jobs, credentials, plugins, etc.
+
+
+Important Jenkins jobs
+
+Micorosoft.NetCodeCoverage
+Microsoft.NetWebAppContainerization
+MicrosoftDotnetCoreWebAPIContainerization
+SpecflowDocker 
+InfyBankApplicationDeployment
+TDM
+APITesting
+ApplicationDeployment
+FunctionalTesting
+PerformanceTesting
+SmokeTesting
+RegressionTesting
+DockerJagacyTest
+DockerSmokeTestNGZaleniumELKFinal
+
+Whichever name of jenkins job has Docker prefixed, are dockerized ones.
+
+
+---------------
+Important Jenkins pipeline
+
+MicrosoftCICDPipeline
+SmokeTestNGZaleniumPipeline
+InfyBankContinuousTestingPipeline
+
+-------
+
+All the jenkins job which deals with containerization deletes the docker images & containers first, then its dockerfile build will be executed, followed by running its container.
+
+For InfyBankContinuousTestingPipeline, jdk, maven and git should be installed correctly in the machine where it will be running. Currently, we run it in windows slave machine. Because for linux machines, Chrome is not pre-installed in it and also it needs redhat server license to install.
+Also, Jfrog repository & tomcat should be running to upload the artifact(i.e. war file of applciation) and deploy it.

@@ -1,0 +1,18 @@
+====================Kubernetes=And=Zalenium============
+We have used 4 VMs to create cluster where 1 VM will be controller machine, 2 will be master and 3 will be nodes.
+
+We have used kubespray which consists of ansible playbooks to create kubernetes cluster. 
+You have mention the machine details in the host file of kubespray present inside inventory folder.
+We have modified that kubespray ansible playbooks according to the Infosys network which is present in the Infygit repo https://infygit.ad.infosys.com/solutions/KubesprayKubernetes
+
+Make sure that all the dependencies are installed and the controller is able to ping all the cluster machines.
+
+To create a cluster, you have to run the cluster.yml file.
+To delete a cluster, you have to run reset.yml file. 
+
+We have currently 2 clusters setup in Infosys network. One is used for training purpose and another for team work.
+
+Selenium grid yaml files are present in the https://github.com/kubernetes/examples/tree/master/staging/selenium
+
+For zalenium deployment in cluster, you can refer the Infygit repo https://infygit.ad.infosys.com/solutions/ZaleniumKubernetes
+
