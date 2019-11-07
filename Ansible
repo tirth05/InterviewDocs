@@ -8,21 +8,25 @@
     -> Is is an agent less.You just need to install ansible on control machine
     -> It uses the SSH connection for secure cnnection. 
     -> It is push base archi to send configration.
+--> Plugins : If you want to execute Ansible task as Job then this plugins can be use.
 --> Installation Of ansible
     -> There is one control machine and many remote machine and you need to install ansible on control machine.
 --> HOST Inventory:
-    -> Basicallt inventory is a group of host.
+    -> Basicallt inventory is a group of host. Contian the location of the host system
     -> Defalt path to host file will be in /etc/ansible/hosts/
     -> We can group the diffrent machine's IP or host name. And whenever we want to do a change on specific group you jst need to 
         mention the name of that group in Host.
 --> Ansible Module:
-    -> It is a executable module that do real job.
+    -> It is a set of small programs to perform specific task.
     -> This module can be invoke from CLI or can be speciy in playbook.
-    -> 
+    -> Type:
+        Core and Extras
 --> Playbook: It define the task which need to be execute on all the nodes. It is building block of all the usecases of ansible.
 --> Ansible Play Book
     -> name: Define the name of the ansible playbook
     -> hosts: IT define the name of the host group on which we want to perform the actions. IT is mandetory field.
     -> vars: It defines the variable which you can use in your playbook.
     -> tasks: Mendatory and define the tasks which need to be perform.
-    -> 
+    -> Handlers: It is use to trigger the status of a service.
+--> Ad-hoc command :It is one line command to execute a task. It is an alternative to Playbook.
+--> 
