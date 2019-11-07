@@ -1,0 +1,11 @@
+--> Ansible is open source configgration management tool which is use to automates application, deployment ,infra service orchestration etc.
+--> It is use Playbook to describe the automation job and it uses the lang YAML.
+--> It handles the Host file which are basicallt inventory files. And by definfing in the host we can control the actions on specified
+    groups in the playbook.
+--> Ansible is connected to nodes and it sends the small program call ansible module to them.
+    And management node does the SSH connection and invetory provide the list of the nodes on which this modules needs to be intall.
+--> Feature of Ansible:
+    -> Is is an agent less.You just need to install ansible on control machine
+    -> It uses the SSH connection for secure cnnection. 
+    -> It is push base archi to send configration.
+--> 
