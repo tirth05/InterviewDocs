@@ -1,0 +1,56 @@
+--> To check memory:
+free -m
+free -g
+vmstat
+cat /proc/meminfo
+--> Ctrl + Atrl + Dlt will work in Linux.
+--> In Linux all drives will not refer with drive letters. It will refer with
+	differenet designation.
+--> chmod is to assign the permission. "+" is to assign and "-" is to deny the permission.
+--> Hardlinks will point directly to file on disk not to Path.
+--> Filename can have maximum 255 character
+--> Empty directory is represent the base of Linux system and serves as attachement of all
+	other dict, files.
+--> Three permission in Linux. Read, Write, Execute
+--> Three modes under vi.
+	-> Command mode - where you start
+	-> edit mode - Where you edit file
+	-> Ex mode - Where you pass instruction to process file
+--> grep comannd is used for pattern based searching of file
+--> kill command is used to terminate ongoing process.
+--> More than one command can be run by seperating them by ";"
+--> to check the size of file or folder is 
+	du -sh file_name
+--> to append one file to another use command file1 >> file2 or file1 > file2
+--> To view text file use command 
+	less file_name
+--> To run the program in background simultanelously  when you start your linux server use below command
+	nohup : It will stop you from loging out of the program and will run in background.
+--> To remove library in linux use 
+	sudo apt-get remove lib_name
+--> Process Management System Calls
+	fork() : to create new process
+	exec() : to execute process
+	wait() : Wait untill process finishes execution
+	exit() :
+--> tar command is used to extract or archive the file
+	To unzip : tar -xvzf file_name
+	To Zip : tar -cvzf file_name
+--> ps command is use to list all the runnnig processes
+--> To see all the mounted device on Linux
+	mount -l
+--> To see where file is stored in linux 
+	locate file_name
+--> To see the difference between two configuration files
+	diff file1.conf file2.conf
+--> To schedule a task in Linux 
+	-> Use cron command : It will create a cron file from which it will read and 
+				schedule a task repeteadly on given time
+	-> Use at command : It will schedule a task for once only.
+--> You can login in another system from current using
+	ssh username@ip
+--> To open a file in read only mode using vi use
+	vi -R file_name
+--> "export" command in Linux is used for to set or reload the environment variable.
+--> To check the status of all the services use
+	service --status-all
