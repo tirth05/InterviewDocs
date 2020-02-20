@@ -1,0 +1,32 @@
+--> Apache Tomcat is use to run Java application on the host and server based system.
+--> Default port for Apache is 8080
+--> Inbuilt container in Tomcat is Catelina and it is in bin directory.
+--> Catalina is responsible for loading all request related to HTTP.
+--> To start Apache Tomcat using services use
+	"services httpd start" and to stop use
+	"httpd stop"
+--> To stop apache by its control scripts use
+	"apachectl stop" : for Ubuntu
+	"/etc/inid.t/httpd.stop" : for redhat based
+--> To check the Apache tomcat version use
+	"httpd -v"
+--> Types of connectors used by Apache
+	Http(Use Tomcat Coyote) and AJP
+--> Types of configuration files in Catalina
+	XML, Property, Policy, Tomcat-users.xml
+--> WAR: Combination of Jsp, Servlet and HTML.
+	We need to place this WAR into WebApp folder in tomcat.
+--> Tomcat Valve : It is use to link between object of specific class to container of Catalina.
+--> MAC - Medium Access Control
+--> Apache tomcat generate two log file for it's apps.
+	Access.log and error.log
+--> Apache tomcat is build to host Web contents while apache server is use to host static contents.
+--> Apache store logs at /var/logs/httpd
+--> To see which users are reaching to our servers use
+	${Referer}
+--> 403 error means : forbidden error
+    404 error menas : http response error and not able to reach server.
+--> Apache runs with user "nobody" and httpd daemon
+--> Main configuration file of apache will be in
+	/etc/httpd/conf/httpd.conf
+	/etcapache2.conf
