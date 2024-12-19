@@ -16,3 +16,90 @@ Selenium grid yaml files are present in the https://github.com/kubernetes/exampl
 
 For zalenium deployment in cluster, you can refer the Infygit repo https://infygit.ad.infosys.com/solutions/ZaleniumKubernetes
 
+--> Diff b/w Kubernete and Swarm
+    -> GUI for kubernete is available but for swarm is not available
+    -> Kubernete can do autoscaling but not by swarm
+    -> Load balancing is tough in kubernter while in swarm automatically
+    -> Rollback does auto rollback bt not in swarm
+    -> Im buit tool for logging in Kubernetes but not in Swarm
+--> Kubernete is cluster management tool which is responsible for cluster deployent, scaling, descaling. 
+--> Docker is used to create the container while Kubernete is used for communication b/w the container.
+--> Container Orchastration : If microservice put in the diff diff contaier then this container orchastration is responsible for the 
+    communication between this containers.
+--> Google container Engine : It is container orchastation and management tool which is totally based on Kubernetes.
+--> Feature of Kubernete :      
+    Auto Scheduling
+    Automated rollout roll back
+--> Diff b/w kubernete and swarm
+    -> Swarm is the default cluster management provided by Docker and can handle only simple container only while Kbernetes can handle complex
+    container as well.
+--> Node in the Kubernete is the main worker machine.
+--> Kubernetes Namespaces: The main task of namespace is to divide the clster resorce between multiple users.
+--> Pod : Pod is the one which multiple containers are running.
+--> Node in the Kuber is VM, physical machine. Nodes provide the services to run the Pod on it. And this nodes are manages by Master. 
+--> Heapster : It is a performance moniterning and matric colletion supported by kubernetes and it is open source.
+--> Kubelet : It is lowest level of component in Kubernetes and responsible for running each and every slave machines, also responsible
+    for communication b/w master and slave node. Kubelete runs on the basis of pods specification. 
+--> Minikube : It is used to run the Kubernetes locally. And it runs a single node kubernete cluster.
+--> Kubectl : It is command line tool and use for sending command to cluster.
+--> Componenets of Kubernetes : 
+    -> Master Node : kube-controller-manager, kube-apiserver, kubescheduller
+    -> Slave Node : kubelet , kuberproxy
+--> Master Node : It is responsible to control nodes.
+--> Kube-controller-manager : It will use to compile diff controller services, for namespace creation, for garbage collectio.
+    Tupes of Controller : Node, Endpoint, Replication
+--> Kubeproxy : Runs on each node. It define the Network rules on the nodes and this rules allow you to communicate to your pods.
+    Use for tcp/udp packgening and forwording on backend networks.
+--> Kube-api server : It is use to validate the configuration data stored in etcd and the details of deployed cluster such as cluster state.
+    and responsible for establishing connection b/w Kubernetes node and master node.
+--> Kubescheduler : The kube-scheduler has the job of assigning the nodes to the newly created pods. Means responsible for distribution 
+    of the workload on worker node.
+--> ETCD : It store the configuration details and wright values. It is a type of database to store configuration info. 
+--> Volume : It is a dorectory accessible to all container running in the pod.
+--> Persistent Volumes : It is a peice of storage in Kubernete cluster. It's like a volume plugins like volume.
+
+--> We can set a static IP for Kubernetes load balancer by changing the DNS records whenever Kubernetes Master assigns a new IP address.
+--> Types of service in Kubernetes :
+       Cluster Ip: Expose the service on cluster port inside the cluste. 
+       Node Port : Expose the port to node 
+       Loadbalance : Expose the service externally 
+       External Name :
+--> Load Balancing : It allows us to expose the services. Two types
+    Internal load balance : balance load autommatically and allocate pods based on required conf.
+    External load balance : Direct the traffic from external load to backend pod. 
+--> Ingress Network: It is a set of rules that act as an entry point to Kubernete cluster. And it provide the access to service 
+       through HTTP request so it is more secure. It is all about routing.  
+--> Resource monitering : Kubernetes create the abstration at diff level like container, pods, service, and whole cluuster for resorce 
+    monitering.
+    Methods for Resource mmonitering : Proethuse, Grafana, CAdviser
+--> Repica set and Replication Controller both are used for nummber of pod replica are running but the difference between them is the usage
+    of selectors
+    Replication Controller use equity based selectors : It allow the filteing by labelkey and value
+    Replica Set use Set based selectors : Where you can define proper set.
+--> Headless Service : It is a normal Service withot the clster ip and ypu can directly reach to the pods withot the need to access throgh a proxy
+--> Fedrated Cluster : Multiple kubernete cluster can be created and managed toagather is known as fedrated cluster and it can be achinved
+    using two things 1) cross cluster delivery 2) Sync resouce across cluster.
+--> Worker/Slave node : It contains the required services to manage the netwokring between containers and commnicate with mmaster which
+    allows you to assign a resurce to scheduled cntainers.
+--> Replication Controller : It is an object which defines the pod template. It also control the parameter to scale the identical replica
+    of Pod.
+--> Replication Set : It is an interation on replication controller design with flexibility that find how the controller recongnize the
+    pod it is meant to manage.
+--> Deployment: It is common workload which can be directly created and managed. It uses Replication Set as building block which add 
+    feature of life cycle management.
+--> Daemon Set: It is an another set of Pod controller which run the copy of the Pod on every node. 
+--> To attach things to running cont.
+    kubectl attach <pod> -f <cont.>
+--> To see cluster info
+    kubectl cluster info
+--> To create the resource 
+    kubectl create -f <filename>
+    To dlt resource
+    kubectl delete -f <filename>
+    To describe any perticular resource
+    kubectl describe -f <filename>
+--> To expose any Kubernetes object like Pod,replication controller etc
+    kubectl expose
+--> To get the logs of the container running in pod
+    kubectl logs
+--> To scale 
