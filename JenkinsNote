@@ -1,0 +1,115 @@
+--> Why Jenkins?
+It have plugins which adopt many systems.
+It provide robust continous integration system.
+It continuously provide access to working copy.
+Easy to write plugins.
+It is so modular that we can solve the problem at any time.
+
+--> Java is needed to install Jenkins
+ 
+--> To install java in ubuntu first install JAVA8 on system then add some command to install Jenkins on ubuntu system.
+--> systemctl status/start/restart/stop jenkins
+--> Build Trigger
+	--> Build Periodecally(Using Croning) :- To build a job periodically.  
+	--> Trigger build Remotely :- Using authentication Token and it is used to trigger a build remotely.
+	--> Poll SCM :- Work same as Build periodically but every time it check the Git repositery and check
+		any new commit happen if it happens then it will build the JOb again.
+--> Build Enviroment 
+	--> 
+--> Build:
+	--> If you are on windows select Execute Windows Batch Command
+	--> For Linux/Mac : Execute Shell
+--> W : Shows last 5 build
+--> Jenkins provide the copy feature to copy the configuration from another job.
+--> How to create user in Jenkins
+	Go to Manage users-->Create user
+--> Role Based Authentication Plugin : To give the access based on user's roll.
+--> Matrix based security is also there
+--> Jenkins Configurations:
+	--> #of executors: no of job can run parallel
+	--> Usage: By default is Use this node as much as possible
+	--> Quite Period: Sometimes it is possible that you github repo is take time to happen changes of to push the changes
+		in that case your Jenkins will wait for some time ti build that project.
+		This reduces the size of the queue, meaning that developers would get feedback 
+		faster for their series of commits, and the load on the Jenkins system would be reduced.
+	--> SCM checkout retry count : It will try to reach out to your git repo for specified number of times.
+	--> Restrict Project Naming: To restrict the give the name of your Job.
+	--> Global Property:	
+		-- Can give enviroment variable
+		-- Tool location 
+	--> Administrative monitors configuration :- Administrative monitors are warnings shown to 
+		Jenkins administrators about the state of the Jenkins instance. 
+	--> To set Email notification you have to set SMTP server for email in this configuration part. 
+
+==> Jenkins job for Maven Project.
+	--> For Maven project in Build part select Invoke Top level maven targets
+	
+==> Email Notification.
+	--> First of all you need SMTP server of your email to send email notification.
+	--> You have to add Extened Email notification plugin
+	--> For more features use Editable email notification and configure Extended email notification in configuration.
+==> Jenkins Pipeline:
+	For pipeline we can write the jenkinsfile in the SCM tool or directly in the Jenkins job configuration.
+	pipeline {
+	        stage('Build') {  Defines the "Build" stage.
+     		       steps {
+     	           // 	  Perform some steps related to the "Build" stage.
+        	    }
+ 	       }
+        	stage('Test') {   Defines the "Test" stage
+            		steps {
+                // 	  Perform some steps related to the "Test" stage.
+	            }
+       		}
+        	stage('Deploy') { Defines the "Deploy" stage.
+            		steps {
+                //        Perform some steps related to the "Deploy" stage
+            		}
+        	}
+    	}
+	}
+	--> bat for win and sh for linux
+	
+--> To take the backup of the Jenkins either use .jenkins folder or use thinbackup plugins.
+--> Jenkins home directory is .jenkins.
+--> You can also take the Jenkinsfile from the Githu..is more easy way.
+--> for that Jenkins file should in root folder.
+
+
+==> Master slave
+	--> There is requirement that 
+	--> windoes or linux can be
+	--> Slave can be connect either using WinStart or SSH.
+	--> You need to provide a path for 
+==> Parametrized Job
+	--> This project is paramterized.
+	--> Boolean, Choice, Credential, File, Password, Run, String Parammeter.
+	--> We can use this parameter in the below script or at the time of build.
+	--> For windows use % and for linux 
+	
+==> Jenkins CLI
+	--> To build any job you have to download the jenkins jar file and copy that file to Jenkins folder then use that jar to 		execute.
+	--> You need to select Anyone can do anything.  You can also use Logged in user can do anything but in that case at time of 			passing command you have to provide username and password.
+ 	--> -f is show the output in CLI. -s is also for more verbose output.
+	--> To pass the parameter in CLI command use -p command and then name of the parameter.
+		-p "nameofparameter"="value"
+		
+==> Multibranch Pipeline
+	--> 
+	
+	
+==> For maven project you have to select in build step 
+	-- top level maven targets and then provide the maven version and maven goals.
+--> Jenkins is written in Java and freely available.
+--> Benefits of Jenkins
+	Jenkins is used to continuously monitor the large code base in real time. It enables developers to find bugs in their code and 		fix. Email notifications are made to the developers regarding their check-ins as a post-build action.
+--> Groovy is the default scripting language that is being used in development from JMeter Version 3.1. in Jenkins
+--> Continuous Integration involve Coding, Unit test, Integration, Accaptance testing
+--> Continuous Delivery ivolve above all the steps + deployment but that will be manually.
+--> Continuous Deployment involve above all + automated deployment
+--> Continuous integration or continuous delivery pipeline consists of build, deploy, test, release pipeline.
+--> Jenkins supported SCM tools include: CVS, Git, Accurev, RTC
+--> (Jenkins_url)/restart: To force restart without waiting for build completion.
+    (Jenkin_url)/safeRestart: Waits until all the build gets completed before restarting.
+--> You cam clone the Git repo jenkins but you need login credential in jenkins
+--> 
