@@ -1,0 +1,53 @@
+--> How to install Git on ubuntu
+Use commands given on official website in linux terminal.
+--> git --version
+--> git config --global user.name "tirth05"
+--> git config --global user.email "emailid"
+--> git config --list
+--> ls -a : to list all files
+--> clone "repo name"
+--> gedit : to open the file
+--> To get the status of your repositery
+	git status 
+--> git add file_name : to add file in git
+--> git commit -m "Comment" file_name   -  it will not refelct in git hub account, for that u have to push that file
+--> git push -u origin master
+--> git init : to initialize the git repository
+--> git remote add origin
+--> git is version comtrol tool/source code management tool.
+--> Git is decentralize vesrion toll and SVn is centralized. Offline commit is possible in git but not in SVN
+--> Git uses C lang.
+--> bare repo : Is is used when you are working on project from diff comps. It contains the version history of your code.
+--> Conflict in GIT : When two diff branch do the edit or delete in same repo or file.
+--> git revert commit_id
+--> SubGIT: Is a tool for SVN to GIT migration
+--> Pull and fetch : Pull will pull pulls new changes or commit from perticular branch from your central repo and updates a target branch in local repo
+	-> Fetch will pull all new commits and store in new branch in local repo. It muct followed with git merge.
+	-> Git pull = git fetch + git merge
+--> git instaweb : Use to automatically direct a webbrowser and run a webserver with an interface into your local repo.
+--> git is-tree : it is represent a tree object including the mode and name of each item and SHA1 value of tree.
+--> git stash :  to continue git stash apply
+--> git diff gives the changes b/w commit , commit and working tree.
+	While git status shows the diff b/w working dir and index.
+--> git stash drop : to drop last git stsahdrop 
+--> To get the file tha has changed during commit
+	git diff-tree -r {hash}
+--> Branching strategies : 
+	Feature, Task, Release
+--> To check which are the branches that are merged into master
+	git branch --merged
+	git branch --no-merged
+--> git revert : It will do a that undoes the changes from previous commit
+    git reset :  It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at
+--> Git rebase is use to copy changes from one branch to another. Also another way of merging
+    gir merge : It is the way of merging multiple barnch in single branch
+--> git head : It is reference to commit object. master head is default one and you can create any number of head.
+--> Branching : You can create your own brnaches and jump b/w those branches. 
+	-> In branching standard way is maintain one as Main branch and create another to add new feature int it. And to copy the result 	    in main branch use "git merge" or "git pull"
+	-> To delete branch use “git branch –d [head]”
+--> 'git remote add’  just creates an entry in your git config that specifies a name for a particular URL.
+--> git rm : To remove the file from stagin area it is used
+--> git reset : It will reset your workking dir as well as index to last commit
+--> To fix the broken commit use.
+	git command --amend
+--> 
